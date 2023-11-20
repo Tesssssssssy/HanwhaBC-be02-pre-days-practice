@@ -1,6 +1,4 @@
-package numBaseball;
-
-import com.sun.jdi.IntegerValue;
+package numBaseballExample;
 
 import java.util.List;
 
