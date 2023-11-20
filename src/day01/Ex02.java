@@ -13,10 +13,10 @@ public class Ex02 {
 
         for (int i = 0; i < 6; i++) {
             Integer number = (int)(Math.random()*100);
-            System.out.println(number);
+            System.out.print(number + " ");
         }
 
-
+        System.out.println();
         System.out.println("------------------");
         // 다음 코드를 6번 반복
         //     0부터 9까지 숫자 중 랜덤한 숫자를 하나 생성해서 저장
@@ -24,7 +24,7 @@ public class Ex02 {
 
         for (int i = 0; i < 6; i++) {
             Integer number2 = (int)(Math.random()*9);
-            System.out.println(number2);;
+            System.out.print(number2 + " ");
         }
     }
 }
