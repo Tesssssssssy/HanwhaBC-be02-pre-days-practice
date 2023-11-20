@@ -16,23 +16,32 @@ public class Ex04 {
         double random1 = Math.random();
         int num1 = (int)Math.round(random1 * (weapon.length-1));
 
-        int player1 = weapon[num1];
-
         double random2 = Math.random();
         int num2 = (int)Math.round(random2 * (weapon.length-1));
 
-        int player2 = weapon[num2];
 
-        System.out.println("player1: " + player1);
-        System.out.println("player2: " + player2);
+        Player player1 = new Player();
+        player1.name = "player1";
+        player1.weapon = weapon[num1];
 
-        if (player1 > player2) {
+
+        Player player2 = new Player();
+        player2.name = "player2";
+        player2.weapon = weapon[num2];
+
+
+        System.out.println(player1.name + " : " + player1.weapon);
+        System.out.println(player2.name + " : " + player2.weapon);
+
+
+        if (player1.weapon > player2.weapon) {
             System.out.println("player1 승리");
-        } else if (player1 == player2) {
+        } else if (player1.weapon == player2.weapon) {
             System.out.println("무승부");
         } else {
             System.out.println("player2 승리");
         }
+
         // player01이 가위, 바위, 보 중 랜덤하게 하나를 선택
 
         // player02가 가위, 바위, 보 중 랜덤하게 하나를 선택
