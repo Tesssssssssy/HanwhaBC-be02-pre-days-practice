@@ -23,11 +23,13 @@ public class Ex04 {
 
         int player2 = weapon[num2];
 
-        System.out.println(player1);
-        System.out.println(player2);
+        System.out.println("player1: " + player1);
+        System.out.println("player2: " + player2);
 
         if (player1 > player2) {
             System.out.println("player1 승리");
+        } else if (player1 == player2) {
+            System.out.println("무승부");
         } else {
             System.out.println("player2 승리");
         }
