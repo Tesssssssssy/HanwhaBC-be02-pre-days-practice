@@ -27,4 +27,18 @@ public class Ex02 {
             System.out.print(number2 + " ");
         }
     }
+
+
+        /* 선생님 코드
+            Integer num1 = 0;
+            while (num1 < 5) {
+                Integer num2 = 0;
+                while (num2 < 5) {
+                    System.out.printf("*");
+                    num2 = num2 + 1;
+            }
+            System.out.println();
+            num1 = num1 + 1;
+        */
+
 }
