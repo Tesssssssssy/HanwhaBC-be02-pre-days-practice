@@ -19,6 +19,10 @@ public class GenerateRandomNum {
             random.nextInt(max) + min
             max - random값 중 가장 큰 값
             min - random값 중 가장 작은 값
+
+            0-9까지의 random 값을 가져오기 위해선
+            Random random = new Random();
+            random.nextInt(9);
         */
     }
 
