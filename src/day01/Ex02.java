@@ -11,22 +11,32 @@ public class Ex02 {
 
         // 위 코드를 활용하여 연금 복권 번호를 생성해보시오.
 
-        List<Integer> list = new ArrayList<>();
+        List<Integer> list1 = new ArrayList<>();
 
         for (int i = 0; i < 6; i++) {
             Integer number = (int)(Math.random()*100);
-            list.add(number);
+            list1.add(number);
         }
 
-        for (int l : list) {
+        for (int l : list1) {
             System.out.println(l);
         }
 
+        System.out.println("------------------");
         // 다음 코드를 6번 반복
         //     0부터 9까지 숫자 중 랜덤한 숫자를 하나 생성해서 저장
         //     저장한 숫자를 출력
 
+        List<Integer> list2 = new ArrayList<>();
 
+        for (int i = 0; i < 6; i++) {
+            Integer number = (int)(Math.random()*9);
+            list2.add(number);
+        }
+
+        for (int l : list2) {
+            System.out.println(l);
+        }
 
 
     }
