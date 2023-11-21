@@ -10,7 +10,6 @@ import java.util.Arrays;
  * 내 버전
  */
 
-
 public class Ex08 {
     public static void main(String[] args) {
 
@@ -22,7 +21,12 @@ public class Ex08 {
                 tempNum = (int) (Math.random() * 6) + 1;    // 만약 lotto 배열에 생성한 tempNum이 있다면 새로 random 값 생성 후 할당
                                                             // 중복 제거 확인 후 6 -> 45로 바꿔주면 됨.
             }
-
+            /*
+            if (contain(lotto, randomNum)) {
+                randomNum = (int)(Math.random() * 6) + 1;
+                i = 0;
+            }
+            */
             lotto[i] = tempNum;                             // 이제 lotto 배열에 random값 tempNum이 없으니까 lotto 배열에 random 값 할당
         }
 
