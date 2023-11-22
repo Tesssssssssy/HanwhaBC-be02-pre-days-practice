@@ -2,6 +2,7 @@ package day03.LeagueOfLegend;
 
 public class Main {
     public static void main(String[] args) {
+    /*
         System.out.println("챔피언 객체 garen 생성 전");
         Champion garen = new Champion();
         System.out.println("챔피언 객체 garen 생성 후");
@@ -18,6 +19,7 @@ public class Main {
         for (int i = 0; i < garen.itemList.length; i++) {
             garen.itemList[i] = "빈칸";
         }
+    */
 
         /*
             위 방식으로 절대 설정하지 않음.
@@ -27,7 +29,7 @@ public class Main {
             직접 값을 할당하는 방식은 거의 사용하지 않음.
             메소드를 통해서 값을 부여하는 방식으로 진행해야 한다.
         */
-
+    /*
         System.out.println("챔피언 객체 darius 생성 전");
         Champion darius = new Champion();
         System.out.println("챔피언 객체 darius 생성 후");
@@ -44,6 +46,39 @@ public class Main {
         for (int i = 0; i < darius.itemList.length; i++) {
             darius.itemList[i] = "빈칸";
         }
+*/
+
+        System.out.println("챔피언 객체 생성 전");
+        Champion garen = new Champion(
+                "가렌",
+                72,
+                100,
+                580,
+                60,
+                1,
+                0,
+                0.0,
+                0.0,
+                new String[6]
+        );
+        System.out.println("챔피언 객체 생성 후");
+        System.out.println(garen.hp);
+
+        System.out.println("챔피언 객체 생성 전");
+        Champion darius = new Champion(
+                "다리우스",
+                64,
+                175,
+                652,
+                39,
+                1,
+                0,
+                0.0,
+                0.0,
+                new String[6]
+        );
+        System.out.println("챔피언 객체 생성 후");
+        System.out.println(darius.hp);
 
         System.out.println();
 
@@ -125,5 +160,17 @@ public class Main {
             7차 공격 후 현재 가렌의 체력: 100
         */
 
+        // 내가 하나하나 다 확인하기 너무 귀찮음
+        System.out.println(darius.name + " " + darius.hp);
+
+        Champion jinx = new Champion("징크스");
+
+        Champion katalina = new Champion(400);
+
+        katalina.move(20.0,10.0);
+
+        Tristana tristana =  new Tristana("트리스타나");
+        tristana.move(10.0, 20.0);
     }
+
 }

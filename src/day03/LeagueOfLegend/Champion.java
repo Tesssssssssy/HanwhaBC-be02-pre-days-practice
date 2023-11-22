@@ -1,5 +1,7 @@
 package day03.LeagueOfLegend;
 
+import java.util.Arrays;
+
 /**
  * 공통적인 특성
  * - 이름
@@ -33,8 +35,48 @@ public class Champion {
     Double y;  // 좌표 y
     String[] itemList;   // 아이템 목록 (최대 6개)
 
+    @Override
+    public String toString() {
+        return "Champion{" +
+                "name='" + name + '\'' +
+                ", attackDamage=" + attackDamage +
+                ", attackRange=" + attackRange +
+                ", hp=" + hp +
+                ", defense=" + defense +
+                ", level=" + level +
+                ", exp=" + exp +
+                ", x=" + x +
+                ", y=" + y +
+                ", itemList=" + Arrays.toString(itemList) +
+                '}';
+    }
+
     public Champion() {
         System.out.println("생성자가 생성되었다");
+    }
+
+    Champion(String name){
+        this.name = name;
+    }
+
+    Champion(Integer hp){
+        this.hp = hp;
+    }
+
+    public Champion(String name, Integer attackDamage, Integer attackRange, Integer hp, Integer defense, Integer level, Integer exp, Double x, Double y, String[] itemList) {
+        this.name = name;
+        this.attackDamage = attackDamage;
+        this.attackRange = attackRange;
+        this.hp = hp;
+        this.defense = defense;
+        this.level = level;
+        this.exp = exp;
+        this.x = x;
+        this.y = y;
+        this.itemList = itemList;
+        for (int i=0; i<this.itemList.length; i++) {
+            this.itemList[i] = "빈칸";
+        }
     }
 
     Integer expUp(String enemy) {   // 경험치 업
