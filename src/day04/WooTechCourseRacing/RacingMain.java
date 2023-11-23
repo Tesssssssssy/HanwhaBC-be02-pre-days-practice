@@ -82,9 +82,6 @@ public class RacingMain {
         }
         System.out.println();
 
-        // 일단 여기까지 누가 가장 멀리 갔는지 확인할 수 있다.
-        // 그렇다면 winnerCnt로 어떻게 할 수 있을까?
-
         String[] winner = new String[5];
 
 
