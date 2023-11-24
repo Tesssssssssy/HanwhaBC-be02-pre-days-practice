@@ -1,4 +1,4 @@
-package numBaseballExample;
+package day01.numBaseballExample;
 
 import java.util.Scanner;
 

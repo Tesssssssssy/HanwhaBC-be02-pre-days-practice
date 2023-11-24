@@ -82,8 +82,6 @@ public class RacingMain {
         }
         System.out.println();
 
-        String[] winner = new String[5];
-
 
         int max = racingCarArr[0].getWinnerCnt();
         for (int i = 0; i < racingCarArr.length; i++) {
