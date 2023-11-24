@@ -67,7 +67,7 @@ public class RacingMain {
         System.out.println("시도할 횟수: " + repeatCnt + "회" + "\n");
 
         for (int i = 0; i <  repeatCnt; i++) {
-            System.out.println(i+1 + "차");
+            System.out.println(i+1 + "차 ");
             for (int j = 0; j < racingCarArr.length; j++) {
                 int randomNum = (int)(Math.random() * 9);
                 racingCarArr[j].setMovement(randomNum);
@@ -91,68 +91,60 @@ public class RacingMain {
         }
 
         System.out.print("최종 우승자: ");
+        String champion = "";
         for (int m = 0; m < racingCarArr.length; m++) {
             if (racingCarArr[m].getWinnerCnt() == max) {
-                System.out.print(racingCarArr[m].getName() + " ");
+                champion = champion + racingCarArr[m].getName() + ",";
             }
         }
+
+        champion = champion.substring(0, champion.length() - 1);
+        System.out.println(champion);
     }
 }
 
+
 /*
 
-경주할 자동차의 수 입력: 4
-경주할 자동차의 수: 4대
+경주할 자동차의 수 입력: 3
+경주할 자동차의 수: 3대
 
 경주할 자동차의 이름을 입력하세요.
-pobi
-woni
-juni
-lili
+a
+b
+c
 
-자동차 이름: pobi
-자동차 이름: woni
-자동차 이름: juni
-자동차 이름: lili
+자동차 이름: a
+자동차 이름: b
+자동차 이름: c
 
-시도할 횟수는 몇 회인가요? 5
-시도할 횟수: 5회
+시도할 횟수는 몇 회인가요? 4
+시도할 횟수: 4회
 
 1차
-pobi :
-woni :
-juni : -
-lili :
+a :
+b : -
+c : -
 
 2차
-pobi : -
-woni :
-juni : --
-lili :
+a : -
+b : --
+c : -
 
 3차
-pobi : --
-woni : -
-juni : --
-lili :
+a : --
+b : --
+c : -
 
 4차
-pobi : ---
-woni : --
-juni : --
-lili : -
+a : --
+b : --
+c : --
 
-5차
-pobi : ---
-woni : ---
-juni : --
-lili : -
+a : 2
+b : 2
+c : 2
 
-pobi : 3
-woni : 3
-juni : 2
-lili : 1
-
-최종 우승자: pobi woni
+최종 우승자: a,b,c
 
 */
