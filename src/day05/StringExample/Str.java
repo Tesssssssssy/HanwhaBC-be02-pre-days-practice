@@ -6,13 +6,19 @@ public class Str {
         String str2 = "하세요";
 
         System.out.println(str1 + str2 + "\n");
+        /*
+            안녕하세요
+        */
 
         String str3 = "abc.def#ghi-";
         System.out.println("str3: " + str3);
+
         str3 = str3.replace(".", "!");
         System.out.println(". 처리 후 : " + str3);
+
         str3 = str3.replace("#", "!");
         System.out.println("# 처리 후 : " + str3);
+
         str3 = str3.replace("-", "!");
         System.out.println("- 처리 후 : " + str3 + "\n");
 

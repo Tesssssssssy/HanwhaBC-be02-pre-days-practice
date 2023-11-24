@@ -31,11 +31,47 @@ public class CollectionEx {
         System.out.println(hashMap);
 */
 
-
         json.replace("\"", "");
 
-        String key1 = json.split("\\[")[0].replace(":", "").replace("{", "");
+        String key1 = json.split("\\[")[0].replace(":", "").replace("{","");
         System.out.println(key1);
+
+        String tmp = "["+json.split("\\[")[1];
+
+        for (int i = 2; i < json.split("\\[").length; i++) {
+            tmp = tmp + "[" + json.split("\\[")[i];
+        }
+
+        String key2 = json.split("]")[json.split("]").length-1];
+        String value1 = tmp.replace(key2, "");
+
+        HashMap map1 = new HashMap();
+        map1.put(key1, value1);
+
+
+
+        tmp = key2.split(":")[1];
+
+        for (int i = 2; i < key2.split(":").length; i++) {
+            tmp = tmp + ":" + key2.split(":")[i];
+        }
+        String value2 = tmp.split("}")[0] + "}";
+
+        key2 = key2.split(":")[0];
+
+
+        key2 = key2.replace(",","");
+
+        map1.put(key2, value2);
+
+
+        System.out.println(map1.get(key1));
+
+        System.out.println(key2);
+        System.out.println(map1.get(key2));
+
+
+
 
     }
 }
